@@ -127,18 +127,18 @@ module.exports = function (grunt) {
     },
 
     // Make sure code styles are up to par and there are no obvious mistakes
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
-      },
-      all: [
-        'Gruntfile.js',
-        '<%= config.app %>/scripts/{,*/}*.js',
-        '!<%= config.app %>/scripts/vendor/*',
-        'test/spec/{,*/}*.js'
-      ]
-    },
+    // jshint: {
+    //   options: {
+    //     jshintrc: '.jshintrc',
+    //     reporter: require('jshint-stylish')
+    //   },
+    //   all: [
+    //     'Gruntfile.js',
+    //     '<%= config.app %>/scripts/{,*/}*.js',
+    //     '!<%= config.app %>/scripts/vendor/*',
+    //     'test/spec/{,*/}*.js'
+    //   ]
+    // },
 
     // Copies remaining files to places other tasks can use
     copy: {
@@ -173,7 +173,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('debug', function () {
     grunt.task.run([
-      'jshint',
+      // 'jshint',
       'concurrent:app',
       'watch'
     ]);
@@ -191,7 +191,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'jshint',
+    // 'jshint',
     'build'
   ]);
 

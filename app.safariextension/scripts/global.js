@@ -36,6 +36,10 @@ function openOptionsPage() {
   openTab(safari.extension.baseURI + 'options.html');
 };
 
+function openTabCollectionPage() {
+  openTab(safari.extension.baseURI + 'tabCollection.html');
+}
+
 version = localStorage.getItem('version');
 
 if (!version) {
